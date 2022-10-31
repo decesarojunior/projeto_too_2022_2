@@ -1,6 +1,9 @@
 
-package br.edu.ifsul.bcc.too.base.topico4.exercicios.respostas;
+package br.edu.ifsul.bcc.too.topico4.exercicios.respostas;
 
+import br.edu.ifsul.bcc.too.topico4.exercicios.respostas.PessoaEncapsulada;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -11,19 +14,54 @@ import java.util.List;
  */
 public class Exercicio9 {
     
-    public Exercicio9(){
+    public Exercicio9() {
         
-        List<Pessoa> lista = new ArrayList();
+        List<PessoaEncapsulada> lista = new ArrayList();
         
-        Pessoa p = new Pessoa();
-        p.setCPF("00001002255");
+        String dtNascimento = "25/09/1989";
+        
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        
+        java.util.Date dt = null;
+        
+        try{
+        
+             dt = sdf.parse(dtNascimento);
+            
+        } catch (Exception ex) {
+           ex.printStackTrace();
+        }
+        
+        Calendar dtCalendar = Calendar.getInstance();
+        
+        dtCalendar.setTime(dt);
+        
+        PessoaEncapsulada  p = new PessoaEncapsulada("000013", 
+                                                     "teste",
+                                                     "cinza",
+                                                     "cinza claro",
+                                                     dtCalendar,
+                                                     1.73f);
         lista.add(p);
         
+        PessoaEncapsulada  p2 = new PessoaEncapsulada("000013", 
+                                                     "teste",
+                                                     "cinza",
+                                                     "cinza claro",
+                                                     "01/01/1970",
+                                                     1.73f);
+        lista.add(p2);
+       
+        PessoaEncapsulada  p3 = new PessoaEncapsulada();
         
-        p = new Pessoa("", "", "", "", Calendar.getInstance(), 173f);                
-        lista.add(p);
         
-        for(Pessoa pess : lista){
+        
+        lista.add(p3);
+        
+        
+      
+        
+        for(PessoaEncapsulada pess : lista){
             
             System.out.println(pess);
         }

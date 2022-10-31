@@ -1,5 +1,5 @@
 
-package br.edu.ifsul.bcc.too.base.topico4;
+package br.edu.ifsul.bcc.too.topico4;
 
 /**
  *

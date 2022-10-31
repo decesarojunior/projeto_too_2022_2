@@ -1,5 +1,5 @@
 
-package br.edu.ifsul.bcc.too.base.topico4;
+package br.edu.ifsul.bcc.too.topico4;
 
 import java.util.Calendar;
 
@@ -20,7 +20,7 @@ public class PessoaEncapsulada {
     private String corOlhos;
     private String corCabelo;
     private Calendar dataNascimento;
-    private Float altura;
+    private Float altura;    
     
     /*
       Acessibilidade: permite implementar o encapsulamento. Ou seja, encapsular (ocultar) a complexidade (código) 
@@ -71,6 +71,21 @@ public class PessoaEncapsulada {
     }
     public void setNome(String nome) {
         this.nome = nome;
+    }
+    
+    
+    public void setDataNascimento(java.util.Calendar dataNascimento){
+        
+       this.dataNascimento = dataNascimento;
+    
+       
+       //calcula para descobrir a idade
+       int ano =  dataNascimento.get(Calendar.YEAR);
+    
+       
+        
+       
+      // this.idade = ....
     }
     
     

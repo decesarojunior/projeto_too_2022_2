@@ -1,5 +1,5 @@
 
-package br.edu.ifsul.bcc.too.base.topico4.exercicios;
+package br.edu.ifsul.bcc.too.topico4.exercicios;
 
 /**
  *
@@ -8,7 +8,7 @@ package br.edu.ifsul.bcc.too.base.topico4.exercicios;
 public class Exercicio9 {
     
     /*    
-    9. Utilizando o conceito de encapsulamento, crie métodos públicos na classe br.edu.ifsul.bcc.too.base.topico4.PessoaEncapsulada
+    9. Utilizando o conceito de encapsulamento, crie métodos públicos na classe br.edu.ifsul.bcc.too.topico4.PessoaEncapsulada
        para disponibilizar o acesso aos atributos da instância: corOlhos, corCabelo, dataNascimento, altura.
     
     */
